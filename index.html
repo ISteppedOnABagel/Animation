@@ -5,29 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+
+.image {
+    width: 500px;
+    height: 600px
+    overflow: hidden;
+    object-fit: cover;
+}
+
+</style>
+
 <body>
 
-<h2>What Can JavaScript Do?</h2>
+<h2>Talk to the yellow man:</h2>
 
-<p>JavaScript can change HTML attribute values.</p>
+<p>Say something to him!</p>
 
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+<p>Yellow man's response:</p>
 
-<button onclick="document.getElementById('myImage').src='d1.jpeg'">I like you, yellow man.</button>
+<h2 id="demo1" style="display:none">Whatever bro, I don't like you anyway..</h2>
 
-<img id="myImage" src="man1.jpg" style="width:100px">
+<h2 id="demo2" style="display:none">I like you too!</h2>
 
-<button onclick="document.getElementById('myImage').src='download.jpeg'">I do not like you, yellow man.</button>
+<h2 id="demo3" style="display:none">okay then.</h2>
 
-<p id="demo">Go big?</p>
+<div class="image">
+
+<img id="myImage" src="1.jpeg" width="500px">
+
+</div>
+
+<button onclick="document.getElementById('myImage').src='3.jpeg'; document.getElementById('demo2').style.display='block' ; document.getElementById('demo1').style.display='none' ; document.getElementById('demo3').style.display='none'">I like you, yellow man.</button>
+
+<button onclick="document.getElementById('myImage').src='5.jpeg'; document.getElementById('demo1').style.display='block'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='none'">I do not like you, yellow man.</button>
+
+<button onclick="document.getElementById('myImage').src='4.jpeg'; document.getElementById('demo1').style.display='none'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='block'">I am neutral towards you, yellow man.</button>
+
+<h2>Inflate yellow man's ego?</h2>
+
+<p id="demo">Yellow man is great!</p>
 
 <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Yes!</button>
 
-<h2>Say hello!</h2>
-
-<p id="demo1" style="display:none">Hello to you too!</p>
-
-<button type="button" onclick="document.getElementById('demo1').style.display='block'">You: "Hello!"</button>
 
 </body>
 </html>
