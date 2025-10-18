@@ -1,80 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<style>
+  <style>
+    /* * {
+      border: 1px solid;
+    } */
 
-#myImage {
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-    object-fit: cover;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      display: flex;
+      flex-direction: row;
+    }
 
-#imageH {
-    width: 200px;
-    transition: transform 0.3s ease;
-}
+    #myImage {
+      width: 500px;
+      height: 500px;
+      object-fit: contain;
+    }
 
-</style>
+    #imageH {
+      width: 200px;
+      margin: 50px;
+      transition: transform 0.3s ease;
+    }
 
-<body>
+    .Box {
+      padding: 10px;
+      margin: 10px;
+      display: flex;
+      flex-direction: row;
+    }
 
-<h2>Talk to the yellow man:</h2>
+    .help {
+      padding: 10px;
+      margin: 10px;
+      flex: 2;
+    }
 
-<p>Say something to him!</p>
+    .one {
+      /* width: 500px; */
+      text-align: center;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
 
-<p>Yellow man's response:</p>
+    button {
+      margin-top: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-<h2 id="demo1" style="display:none">Whatever bro, I don't like you anyway..</h2>
+    .Talk-btn {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  </style>
 
-<h2 id="demo2" style="display:none">I like you too!</h2>
+  <body>
+    <div class="two">
+      <div>
+        <h2>Talk to the yellow man:</h2>
 
-<h2 id="demo3" style="display:none">okay then.</h2>
+        <p>Say something to him!</p>
 
-<div class="image">
+        <p>Yellow man's response:</p>
 
-<img id="myImage" src="1.jpeg">
+        <h2 id="demo1" style="display: none">
+          Whatever bro, I don't like you anyway..
+        </h2>
 
-</div>
+        <h2 id="demo2" style="display: none">I like you too!</h2>
 
-<button onclick="document.getElementById('myImage').src='3.jpeg'; document.getElementById('demo2').style.display='block' ; document.getElementById('demo1').style.display='none' ; document.getElementById('demo3').style.display='none'">I like you, yellow man.</button>
+        <h2 id="demo3" style="display: none">okay then.</h2>
+      </div>
 
-<button onclick="document.getElementById('myImage').src='5.jpeg'; document.getElementById('demo1').style.display='block'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='none'">I do not like you, yellow man.</button>
+      <div class="Box help">
+        <img id="myImage" src="Barry-Norm.png" />
 
-<button onclick="document.getElementById('myImage').src='4.jpeg'; document.getElementById('demo1').style.display='none'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='block'">I am neutral towards you, yellow man.</button>
+        <div class="Talk-btn">
+          <button
+            onclick="document.getElementById('myImage').src='Barry-Lay.webp'; document.getElementById('demo2').style.display='block' ; document.getElementById('demo1').style.display='none' ; document.getElementById('demo3').style.display='none'"
+          >
+            I like you, yellow man.
+          </button>
 
-<p id="demo">Inflate yellow man's ego?</p>
+          <button
+            onclick="document.getElementById('myImage').src='Barry-Stand.webp'; document.getElementById('demo1').style.display='block'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='none'"
+          >
+            I do not like you, yellow man.
+          </button>
 
-<button type="button" id="b1" style="display: block;"
-    onclick="document.getElementById('demo').style.fontSize='35px'; 
-    document.getElementById('demo4').style.display='block'; 
-    document.getElementById('demo5').style.display='none'; 
-    document.getElementById('b2').style.display='block'; 
-    document.getElementById('b1').style.display='none'; 
-    document.getElementById('imageH').style.transform='scale(1.5)'">Inflate his Ego.
-</button>
+          <button
+            onclick="document.getElementById('myImage').src='Barry-Happy.png'; document.getElementById('demo1').style.display='none'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='block'"
+          >
+            I am neutral towards you, yellow man.
+          </button>
+        </div>
+      </div>
+    </div>
 
-<button type="button" id="b2" style="display: none;"
-    onclick="document.getElementById('demo').style.fontSize='20px'; 
-    document.getElementById('demo4').style.display='none'; 
-    document.getElementById('demo5').style.display='block'; 
-    document.getElementById('b1').style.display='block'; 
-    document.getElementById('b2').style.display='none'; 
-    document.getElementById('imageH').style.transform='scale(0.75)'">Deflate his Ego.
-</button>
+    <div class="Box one">
+      <p id="demo">Inflate yellow man's ego?</p>
 
-<br>
+      <p id="demo4" style="display: none">
+        Careful! You'll give him a big head!
+      </p>
+      <p id="demo5" style="display: none">
+        Thanks for taking him down a notch.
+      </p>
 
-<p id="demo4" style="display:none">Careful! You'll give him a big head!</p>
-<p id="demo5" style="display:none">Thanks for taking him down a notch.</p>
+      <button
+        type="button"
+        id="b1"
+        style="display: block"
+        onclick="document.getElementById('demo').style.fontSize='35px'; 
+        document.getElementById('demo4').style.display='block'; 
+        document.getElementById('demo5').style.display='none'; 
+        document.getElementById('b2').style.display='block'; 
+        document.getElementById('b1').style.display='none'; 
+        document.getElementById('imageH').style.transform='scale(1.5)'"
+      >
+        Inflate his Ego.
+      </button>
 
-<img id="imageH" src="BarryHead.png">
+      <button
+        type="button"
+        id="b2"
+        style="display: none"
+        onclick="document.getElementById('demo').style.fontSize='20px'; 
+        document.getElementById('demo4').style.display='none'; 
+        document.getElementById('demo5').style.display='block'; 
+        document.getElementById('b1').style.display='block'; 
+        document.getElementById('b2').style.display='none'; 
+        document.getElementById('imageH').style.transform='scale(0.75)'"
+      >
+        Deflate his Ego.
+      </button>
 
-</body>
+      <br />
+
+      <img id="imageH" src="BarryHead.png" />
+    </div>
+  </body>
 </html>
-
