@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Yellow Man Interaction</title>
   </head>
 
   <style>
@@ -14,12 +14,15 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
+    }
+
+    .bod {
       display: flex;
       flex-direction: row;
     }
 
     div {
-        text-align: center;
+      text-align: left;
     }
 
     #myImage {
@@ -44,6 +47,7 @@
     }
 
     .help {
+      text-align: center;
       padding: 10px;
       margin: 10px;
       flex: 2;
@@ -52,9 +56,8 @@
     .one {
       /* width: 500px; */
       text-align: center;
-      margin: auto;
+      margin: 0 auto;
       align-items: center;
-      justify-content: center;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -68,96 +71,103 @@
     }
 
     .Talk-btn {
+      height: 500px;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 10px;
+      gap: 5px;
     }
   </style>
 
   <body>
-    <div class="two">
-      <div>
-        <h2>Talk to the yellow man:</h2>
+     <h1>Barry B Benson: The Man, The Myth, The Legend</h1>
+     
+    <div class="bod">
 
-        <p>Say something to him!</p>
+      <div class="two">
+        <div>
+          <h2>Talk to the yellow man:</h2>
 
-        <p>Yellow man's response:</p>
+          <p>Say something to him!</p>
 
-        <h2 id="demo1" style="display: none">
-          Whatever bro, I don't like you anyway..
-        </h2>
+          <p>Yellow man's response:</p>
+        </div>
 
-        <h2 id="demo2" style="display: none">I like you too!</h2>
+        <div class="Box help">
+          <div>
+            <h2 id="demo1" style="display: none">
+              Whatever bro, I don't like you anyway..
+            </h2>
 
-        <h2 id="demo3" style="display: none">okay then.</h2>
-      </div>
+            <h2 id="demo2" style="display: none">I like you too!</h2>
 
-      <div class="Box help">
-        <img id="myImage" src="Barry-Norm.png" />
+            <h2 id="demo3" style="display: none">okay then.</h2>
+            <img id="myImage" src="Barry-Norm.png" />
+          </div>
 
-        <div class="Talk-btn">
-          <button
-            onclick="document.getElementById('myImage').src='Barry-Lay.webp'; document.getElementById('demo2').style.display='block' ; document.getElementById('demo1').style.display='none' ; document.getElementById('demo3').style.display='none'"
-          >
-            I like you, yellow man.
-          </button>
+          <div class="Talk-btn">
+            <button
+              onclick="document.getElementById('myImage').src='Barry-Lay.webp'; document.getElementById('demo2').style.display='block' ; document.getElementById('demo1').style.display='none' ; document.getElementById('demo3').style.display='none'"
+            >
+              I like you, yellow man.
+            </button>
 
-          <button
-            onclick="document.getElementById('myImage').src='Barry-Stand.webp'; document.getElementById('demo1').style.display='block'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='none'"
-          >
-            I do not like you, yellow man.
-          </button>
+            <button
+              onclick="document.getElementById('myImage').src='Barry-Stand.webp'; document.getElementById('demo1').style.display='block'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='none'"
+            >
+              I do not like you, yellow man.
+            </button>
 
-          <button
-            onclick="document.getElementById('myImage').src='Barry-Happy.png'; document.getElementById('demo1').style.display='none'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='block'"
-          >
-            I am neutral towards you, yellow man.
-          </button>
+            <button
+              onclick="document.getElementById('myImage').src='Barry-Happy.png'; document.getElementById('demo1').style.display='none'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='block'"
+            >
+              I am neutral towards you, yellow man.
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="Box one">
-      <p id="demo">Inflate yellow man's ego?</p>
+      <div class="Box one">
+        <p id="demo">Inflate yellow man's ego?</p>
 
-      <p id="demo4" style="display: none">
-        Careful! You'll give him a big head!
-      </p>
-      <p id="demo5" style="display: none">
-        Thanks for taking him down a notch.
-      </p>
+        <p id="demo4" style="display: none">
+          Careful! You'll give him a big head!
+        </p>
+        <p id="demo5" style="display: none">
+          Thanks for taking him down a notch.
+        </p>
 
-      <button
-        type="button"
-        id="b1"
-        style="display: block"
-        onclick="document.getElementById('demo').style.fontSize='35px'; 
+        <button
+          type="button"
+          id="b1"
+          style="display: block"
+          onclick="document.getElementById('demo').style.fontSize='35px'; 
         document.getElementById('demo4').style.display='block'; 
         document.getElementById('demo5').style.display='none'; 
         document.getElementById('b2').style.display='block'; 
         document.getElementById('b1').style.display='none'; 
         document.getElementById('imageH').style.transform='scale(1.5)'"
-      >
-        Inflate his Ego.
-      </button>
+        >
+          Inflate his Ego.
+        </button>
 
-      <button
-        type="button"
-        id="b2"
-        style="display: none"
-        onclick="document.getElementById('demo').style.fontSize='20px'; 
+        <button
+          type="button"
+          id="b2"
+          style="display: none"
+          onclick="document.getElementById('demo').style.fontSize='20px'; 
         document.getElementById('demo4').style.display='none'; 
         document.getElementById('demo5').style.display='block'; 
         document.getElementById('b1').style.display='block'; 
         document.getElementById('b2').style.display='none'; 
         document.getElementById('imageH').style.transform='scale(0.75)'"
-      >
-        Deflate his Ego.
-      </button>
+        >
+          Deflate his Ego.
+        </button>
 
-      <br />
+        <br />
 
-      <img id="imageH" src="BarryHead.png" />
+        <img id="imageH" src="BarryHead.png" />
+      </div>
     </div>
   </body>
 </html>
