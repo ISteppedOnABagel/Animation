@@ -4,131 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yellow Man Interaction</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
   </head>
-
-  <script>
-
-  const button = document.getElementById("button");
-  const element = document.getElementById("myImage");
-
-  button.onclick = fade;
-
-  function fade() {
-    element.classList.toggle("animate")
-  }
-
-  </script>
-
-  <style>
-    /* * {
-      border: 1px solid;
-    } */
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    .bod {
-      display: flex;
-      flex-direction: row;
-    }
-
-    div {
-      text-align: left;
-    }
-
-    .animate {
-      animation-name: fade;
-      animation-duration: 3s;
-      animation-fill-mode: forwards;
-    }
-        
-    @keyframes fade {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-      
-      100% {
-        opacity: 1;
-      }
-    }
-
-    .myImage {
-      width: 500px;
-      height: 500px;
-      margin-right: 5px;
-      padding: 10px;
-      object-fit: contain;
-    }
-
-    .transform {
-      transition: all 2s ease;
-    }
-
-    #imageH {
-      width: 200px;
-      margin: 50px;
-      transition: transform 0.3s ease;
-    }
-
-    .Box {
-      padding: 10px;
-      margin: 10px;
-      display: flex;
-      flex-direction: row;
-    }
-
-    .help {
-      text-align: center;
-      padding: 10px;
-      margin: 10px;
-      flex: 2;
-    }
-
-    .one {
-      /* width: 500px; */
-      text-align: center;
-      margin: 0 auto;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    button {
-    font-family: verdana, geneva, tahoma, sans-serif;
-    font-size: 16px;
-    color: white;
-    background-color: black;
-    border: none;
-    margin-top: 5px;
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 2vw;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.6s;
-    }
-
-    button:hover {
-        color: black;
-        background-color: white;
-        border: 0.2px solid black;
-        box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.479);
-        transform: scale(1.05);
-    }
-
-    .Talk-btn {
-      height: 500px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 5px;
-    }
-  </style>
 
   <body>
     <h1>Barry B Benson: The Man, The Myth, The Legend</h1>
@@ -155,21 +34,23 @@
             <img id="myImage" class="myImage transform" src="Barry-Norm.png" />
           </div>
 
-
           <div class="Talk-btn">
-            <button id="button"
+            <button
+              id="button"
               onclick="document.getElementById('myImage').src='Barry-Lay.webp'; document.getElementById('demo2').style.display='block' ; document.getElementById('demo1').style.display='none' ; document.getElementById('demo3').style.display='none'"
             >
               I like you, yellow man.
-            </button> 
+            </button>
 
-            <button id="button"
+            <button
+              id="button"
               onclick="document.getElementById('myImage').src='Barry-Stand.webp'; document.getElementById('demo1').style.display='block'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='none'"
             >
               I do not like you, yellow man.
             </button>
 
-            <button id="button"
+            <button
+              id="button"
               onclick="document.getElementById('myImage').src='Barry-Happy.png'; 
               document.getElementById('demo1').style.display='none'; document.getElementById('demo2').style.display='none' ; document.getElementById('demo3').style.display='block'"
             >

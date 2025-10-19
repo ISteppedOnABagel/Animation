@@ -1,0 +1,108 @@
+/* * {
+      border: 1px solid;
+    } */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.bod {
+  display: flex;
+  flex-direction: row;
+}
+
+div {
+  text-align: left;
+}
+
+.animate {
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.myImage {
+  width: 500px;
+  height: 500px;
+  margin-right: 5px;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.transform {
+  transition: all 2s ease;
+}
+
+#imageH {
+  width: 200px;
+  margin: 50px;
+  transition: transform 0.3s ease;
+}
+
+.Box {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.help {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  flex: 2;
+}
+
+.one {
+  /* width: 500px; */
+  text-align: center;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+button {
+  font-family: verdana, geneva, tahoma, sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  border: none;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.6s;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+  border: 0.2px solid black;
+  box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.479);
+  transform: scale(1.05);
+}
+
+.Talk-btn {
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
