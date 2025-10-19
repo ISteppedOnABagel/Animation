@@ -79,10 +79,9 @@
   </style>
 
   <body>
-     <h1>Barry B Benson: The Man, The Myth, The Legend</h1>
-     
-    <div class="bod">
+    <h1>Barry B Benson: The Man, The Myth, The Legend</h1>
 
+    <div class="bod">
       <div class="two">
         <div>
           <h2>Talk to the yellow man:</h2>
@@ -136,11 +135,20 @@
           Thanks for taking him down a notch.
         </p>
 
+        <audio id="myAudio" src="ya-like-jazz.mp3" type="audio/mpeg"></audio>
+        <audio
+          id="myAudio2"
+          src="mayday-mayday-bee-going-down.wav"
+          type="audio/wav"
+        ></audio>
+
         <button
           type="button"
           id="b1"
           style="display: block"
-          onclick="document.getElementById('demo').style.fontSize='35px'; 
+          onclick="
+        document.getElementById('myAudio').play();
+        document.getElementById('demo').style.fontSize='35px'; 
         document.getElementById('demo4').style.display='block'; 
         document.getElementById('demo5').style.display='none'; 
         document.getElementById('b2').style.display='block'; 
@@ -154,7 +162,9 @@
           type="button"
           id="b2"
           style="display: none"
-          onclick="document.getElementById('demo').style.fontSize='20px'; 
+          onclick="
+        document.getElementById('myAudio2').play();
+        document.getElementById('demo').style.fontSize='20px'; 
         document.getElementById('demo4').style.display='none'; 
         document.getElementById('demo5').style.display='block'; 
         document.getElementById('b1').style.display='block'; 
